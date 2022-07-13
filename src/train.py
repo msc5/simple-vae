@@ -80,6 +80,7 @@ if __name__ == "__main__":
                 prior = td.Independent(prior, 1)
 
                 # KL divergence term
+                #  TODO: Replace with reparam trick
                 div = Q.log_prob(z) - prior.log_prob(z)
 
                 # Reconstruction term
